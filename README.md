@@ -1,6 +1,4 @@
 # install
-installation scripts
-
 
 ## creamy os
 ```
