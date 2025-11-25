@@ -1,4 +1,5 @@
 #!/bin/bash
 
-curl -o creami.tar.gz https://install.yuros.org/creami.tar.gz &&
-tar xf creami.tar.gz -C /install
+pacman -Syy git --noconfirm &&
+git clone https://github.com/linux-creami/install.git /install &&
+/bin/bash /install/prep.sh
