@@ -29,4 +29,14 @@ if [[ -d "/install" ]];then
 fi
 
 git clone https://github.com/linux-creami/install.git /install &&
-nvim /install/post/config && /bin/bash /install/prep.sh
+nvim /install/post/config && 
+
+
+# CONFIGURE
+/bin/bash /install/prep.sh &&
+cp -fr /install/post /mnt &&
+genfstab -U /mnt > /mnt/etc/fstab &&
+arch-chroot /mnt /bin/bash /post/init.sh &&
+
+# FINISHING
+sleep 2 && umount -R /mnt && reboot
