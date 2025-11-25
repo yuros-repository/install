@@ -29,5 +29,5 @@ if [[ -d "/install" ]];then
 fi
 
 git clone https://github.com/linux-creami/install.git /install &&
-vi /install/post/config && 
+vim /install/post/config && 
 /bin/bash /install/prep.sh
