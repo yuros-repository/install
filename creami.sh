@@ -22,12 +22,12 @@ echo "| Copyright  |  almuhdilkarim@2025                              |"
 echo "+------------+--------------+-----------------------------------+"
 sleep 2 &&
 
-pacman -Syy git --noconfirm &&
+pacman -Syy git neovim --noconfirm &&
 
 if [[ -d "/install" ]];then
     rm -fr /install
 fi
 
 git clone https://github.com/linux-creami/install.git /install &&
-# nano /install/post/config && 
+nvim /install/post/config && 
 /bin/bash /install/prep.sh
