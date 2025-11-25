@@ -18,6 +18,7 @@ echo "| Author     |  Al Muhdil Karim                                 |"
 echo "| Mainteners |  Ibnu Dzaky                                      |"
 echo "| Version    |  v0.01                                           |"
 echo "| License    |  BSD 2-Clause Simplified License                 |"
+echo "| Copyright  |  almuhdilkarim@2025                              |"
 echo "+------------+--------------+-----------------------------------+"
 sleep 2 &&
 
