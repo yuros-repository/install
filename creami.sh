@@ -20,14 +20,15 @@ echo "| Version    |  v0.01                                           |"
 echo "| License    |  BSD 2-Clause Simplified License                 |"
 echo "| Copyright  |  almuhdilkarim@2025                              |"
 echo "+------------+--------------+-----------------------------------+"
-sleep 2 &&
 
-pacman -Syy git neovim --noconfirm &&
 
+sleep 2 && pacman -Syy git neovim --noconfirm &&
 if [[ -d "/install" ]];then
     rm -fr /install
 fi
 
+
+# PREPARING
 git clone https://github.com/linux-creami/install.git /install &&
 nvim /install/post/config && 
 
@@ -37,6 +38,7 @@ nvim /install/post/config &&
 cp -fr /install/post /mnt &&
 genfstab -U /mnt > /mnt/etc/fstab &&
 arch-chroot /mnt /bin/bash /post/init.sh &&
+
 
 # FINISHING
 sleep 2 && umount -R /mnt && reboot
